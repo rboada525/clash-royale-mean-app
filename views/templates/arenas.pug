@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{ title }}</h2></div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="arena in arenas">
+				<a class="thumbnail" href="#!/arenas/{{ arena._id }}">
+					<img class="img-responsive img-thumb" ng-src="/images/arenas/{{ arena.imagen }}.png" alt="{{ arena.nombre }}">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

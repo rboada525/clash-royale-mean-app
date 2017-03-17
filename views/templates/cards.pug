@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{ title }}</h2></div>
+	<div class="panel-body">
+		
+		<div class="busqueda">
+			<div class="col-sm-4">
+				<input type="text" class="form-control" placeholder="Busca una carta por nombre" ng-model="busqueda.nombre">
+			</div>
+			<div class="col-sm-4">
+				<select class="form-control" ng-model="busqueda.calidad">
+					<option value="">Por Calidad</option>
+					<option value="Común">Común</option>
+					<option value="Especial">Especial</option>
+					<option value="Épica">Épica</option>
+					<option value="Legendaria">Legendaria</option>
+				</select>
+			</div>
+			<div class="col-sm-4">
+				<select class="form-control" ng-model="busqueda.tipo">
+					<option value="">Por Tipo</option>
+					<option value="Hechizo">Hechizo</option>
+					<option value="Tropa">Tropa</option>
+					<option value="Estructura">Estructura</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="card in cards | filter:busqueda">
+				<a class="thumbnail" ng-class="card.calidad | efecto" href="#!/cards/{{ card._id }}">
+					<img class="img-responsive img-thumb" ng-src="/images/cards/{{ card.imagen }}.png" alt="{{ cofre.nombre }}">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{ title }}</h2></div>
+	<div class="panel-body">
+		<h3 class="page-header">Torre del Rey</h3>
+		<div class="torres">
+			<div class="details">
+				<img ng-src="/images/blue-king.png" alt="blue-king">
+				<img ng-src="/images/red-king.png" alt="red-king">
+			</div>
+			<div class="stats">
+				<table class="table table-hover table-bordered table-striped">
+					<thead>
+						<tr>
+							<th><img ng-src="/images/icons/level.png" alt="level">Nivel</th>
+							<th><img ng-src="/images/icons/hp.png" alt="hp">Puntos de vida</th>
+							<th><img ng-src="/images/icons/range.png" alt="range">Alcance</th>
+							<th><img ng-src="/images/icons/dmg.png" alt="dmg">Daño</th>
+							<th><img ng-src="/images/icons/ds.png" alt="ds">Velocidad de ataque</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="player in players">
+							<td>{{ player.nivel }}</td>
+							<td>{{ player.torreRey.puntosVida }}</td>
+							<td>{{ player.torreRey.alcance }}</td>
+							<td>{{ player.torreRey.danio }}</td>
+							<td>{{ player.torreRey.velocAtaque }} seg.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<h3 class="page-header">Torres de la Arena</h3>
+		<div class="torres">
+			<div class="details">
+				<img ng-src="/images/arena-towers.png" alt="arena-towers">
+			</div>
+			<div class="stats">
+				<table class="table table-hover table-bordered table-striped">
+					<thead>
+						<tr>
+							<th><img ng-src="/images/icons/level.png" alt="level">Nivel</th>
+							<th><img ng-src="/images/icons/hp.png" alt="hp">Puntos de vida</th>
+							<th><img ng-src="/images/icons/range.png" alt="range">Alcance</th>
+							<th><img ng-src="/images/icons/dmg.png" alt="dmg">Daño</th>
+							<th><img ng-src="/images/icons/ds.png" alt="ds">Velocidad de ataque</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="player in players">
+							<td>{{ player.nivel }}</td>
+							<td>{{ player.torresArena.puntosVida }}</td>
+							<td>{{ player.torresArena.alcance }}</td>
+							<td>{{ player.torresArena.danio }}</td>
+							<td>{{ player.torresArena.velocAtaque }} segs.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

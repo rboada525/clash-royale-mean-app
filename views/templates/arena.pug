@@ -1,0 +1,71 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{ arena.nombre }} <small ng-if="numero">[Arena {{ arena.numero }}]</small></h2></div>
+	<div class="panel-body">
+		
+		<div class="arena">
+			<div class="imagen-arena">
+				<img ng-src="/images/arenas/{{ arena.imagen }}.png" alt="{{ arena.nombre }}">
+			</div>
+			<div class="arena-desbloquea" ng-if="desbloquea">
+				<h2 class="page-header">Cartas que desbloquea</h2>
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="card in arena.desbloquea">
+						<a class="thumbnail" ng-class="card.calidad | efecto" href="#!/cards/{{ card._id }}">
+							<img class="img-responsive img-thumb" ng-src="/images/cards/{{ card.imagen }}.png" alt="{{ card.nombre }}">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clan" ng-if="numero">
+			<h2 class="page-header">Donaciones y peticiones del clan</h2>
+			<div class="peticiones-donaciones">
+				<div class="pide">
+					<span class="span-clan">Pide</span>
+					<div class="peticiones-donaciones">
+						<div class="comunes">
+							<span class="label">x{{ arena.clan.pide.comunes }} Comunes</span>
+						</div>
+						<div class="especiales">
+							<span class="label">x{{ arena.clan.pide.especiales }} Especiales</span>
+						</div>
+					</div>
+				</div>
+				<div class="dona">
+					<span class="span-clan">Dona</span>
+					<div class="peticiones-donaciones">
+						<div class="comunes">
+							<span class="label">x{{ arena.clan.dona.comunes }} Comunes</span>
+						</div>
+						<div class="especiales">
+							<span class="label">x{{ arena.clan.dona.especiales }} Especiales</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="recompensas" ng-if="recompensas">
+			<h2 class="page-header">Recompensas de batallas</h2>
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="cofre in arena.recompensas">
+					<div class="thumbnail">
+						<img class="img-responsive img-thumb-chest" ng-src="/images/chests/{{ cofre.imagen }}.png" alt="{{ cofre.nombre }}">
+					</div>
+					<div class="cofre">
+						<h4>{{ cofre.nombre }}</h4>
+						<div class="detalles-cofre">
+							<div class="oro">
+								<span><img class="gold" src="/images/icons/gold.png"> {{ cofre.oro.min }} - {{ cofre.oro.max }}</span>
+							</div>
+							<div class="cartas">
+								<span><img src="/images/icons/rarity.png"> x{{ cofre.cartas.cantidad }}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

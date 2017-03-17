@@ -1,0 +1,280 @@
+.rarity {
+	background-image: url('../images/icons/rarity.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 5px 0 5px 30px;
+}
+
+.type {
+	background-image: url('../images/icons/type.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 5px 0 5px 30px;
+}
+
+.elixir {
+	background-image: url('../images/icons/elixir.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 5px 0 5px 30px;
+}
+
+.carta, .peticiones-donaciones, .detalles-cofre {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.imagen-carta {
+	order: 1;
+	flex: 0.22;
+}
+
+.detalles-carta {
+	order: 2;
+	flex: 0.5;
+}
+
+.detalles-carta p {
+	text-align: justify;
+}
+
+.detalles-carta ul {
+	list-style: none;
+	padding: 0;
+}
+
+.arena-index {
+	width: 250px;
+}
+
+.arena {
+	align-content: center;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.imagen-arena {
+	flex: 1;
+	order: 1;
+}
+
+.arena-desbloquea {
+	flex: 1;
+	order: 2;
+	width: 100%;
+}
+
+.arena-desbloquea h2, .clan h2, .recompensas h2 {
+	margin: 5%;
+	text-align: center;
+}
+
+.busqueda {
+	margin-bottom: 8% !important;
+}
+
+.comun {
+	background-color: #000 !important;
+}
+
+.especial {
+	background-color: #f27917 !important;
+}
+
+.epica {
+	background-color: #d31ff2 !important;
+}
+
+.legendaria {
+	background-color: lightseagreen !important;
+}
+
+.detalles-carta a {
+	color: cadetblue;
+	font-weight: bold;
+	position: relative;
+	text-decoration: none !important;
+}
+
+.detalles-carta a:before {
+	background-color: lightblue;
+	bottom: -2px;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.detalles-carta a:hover:before {
+	transform: scaleX(1);
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+}
+
+.pide {
+	flex: 0.5;
+	order: 1;
+}
+
+.dona {
+	flex: 0.5;
+	order: 2;
+}
+
+.pide h3, .dona h3 {
+	margin-bottom: 6%;
+}
+
+.comunes {
+	flex: 0.5;
+	order: 1;
+}
+
+.especiales {
+	flex: 0.5;
+	order: 2;
+}
+
+.pide, .dona, .comunes, .especiales {
+	text-align: center;
+}
+
+.comunes span, .especiales span {
+	font-size: 18px;
+}
+
+.comunes span {
+	background-color: #000;
+	color: #fff;
+}
+
+.especiales span {
+	background-color: #f27917;
+	color: #fff;
+}
+
+.pide {
+	border-right: 1px solid #ddd;
+}
+
+.cover img {
+	max-width: 100%;
+}
+
+.span-clan {
+    background-color: #777;
+    border-radius: 8px;
+    color: #fff;
+	display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+	margin-bottom: 10%;
+    min-width: 15px;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.img-thumb {
+	height: 240px !important;
+}
+
+.img-thumb-chest {
+	height: 150px !important;
+}
+
+.cofre {
+	margin-bottom: 10%;
+}
+
+.oro {
+	flex: 0.5;
+	order: 1;
+}
+
+.cartas {
+	flex: 0.5;
+	order: 2;
+}
+
+.torres {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.details {
+	order: 1;
+	flex: 0.3;
+}
+
+.stats {
+	order: 2;
+	flex: 0.7;
+}
+
+.stats th, .stats td {
+	text-align: center;
+}
+
+.stats th img {
+	display: block;
+    margin: 0 auto;
+}
+
+.gold {
+	height: 26px;
+	width: 26px;
+}
+
+.img-legendary img {
+    /* -webkit-animation:img-legendary 3s infinite; */
+    
+    animation: img-legendary 3s infinite;
+}
+
+@-webkit-keyframes img-legendary {
+    0% {
+        filter: drop-shadow(0 0 10px #ff66d9);
+        -webkit-filter: drop-shadow(0 0 10px #ff66d9)
+    }
+    33% {
+        filter: drop-shadow(0 0 10px #ffff33);
+        -webkit-filter: drop-shadow(0 0 10px #ffff33)
+    }
+    66% {
+        filter: drop-shadow(0 0 10px #33ccff);
+        -webkit-filter: drop-shadow(0 0 10px #33ccff)
+    }
+    100% {
+        filter: drop-shadow(0 0 10px #ff66d9);
+        -webkit-filter: drop-shadow(0 0 10px #ff66d9)
+    }
+}
+
+@keyframes img-legendary {
+    0% {
+        filter: drop-shadow(0 0 10px #ff66d9);
+        -webkit-filter: drop-shadow(0 0 10px #ff66d9)
+    }
+    33% {
+        filter: drop-shadow(0 0 10px #ffff33);
+        -webkit-filter: drop-shadow(0 0 10px #ffff33)
+    }
+    66% {
+        filter: drop-shadow(0 0 10px #33ccff);
+        -webkit-filter: drop-shadow(0 0 10px #33ccff)
+    }
+    100% {
+        filter: drop-shadow(0 0 10px #ff66d9);
+        -webkit-filter: drop-shadow(0 0 10px #ff66d9)
+    }
+}

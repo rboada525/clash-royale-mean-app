@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{ card.nombre }}</h2></div>
+	<div class="panel-body">
+		<div class="carta">
+			<div class="imagen-carta" ng-class="card.calidad | efecto">
+				<img ng-src="/images/cards/{{ card.imagen }}.png" alt="{{ card.nombre }}">
+			</div>
+			<div class="detalles-carta">
+				<p>{{ card.descripcion }}</p>
+				<ul>
+					<li class="rarity">Calidad: <span class="badge {{card.calidad | calidad}}">{{ card.calidad }}</span></li>
+					<li class="type">Tipo: {{ card.tipo }}</li>
+					<li class="elixir">Costo de elixir: {{ card.costoElixir }}</li>
+				</ul>
+				<span>Se desbloquea en: <a href="#!/arenas/{{ card.arena._id }}">{{ card.arena.nombre }}</span>
+			</div>
+		</div>
+	</div>
+</div>
